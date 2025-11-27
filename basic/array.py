@@ -54,5 +54,62 @@ py_list = [1, 2, 3, 4, 5]
 # random_array = np.random.random((3, 3))
 # print("Random Array:\n", random_array)
 
-seq = np.arange(10)
-print("Original Array:", seq)
+# seq = np.arange(10)
+# print("Original Array:", seq)
+
+prices = np.array([101.5, 102.3, 103.8, 102.9])
+print(prices)
+# discounted_prices = prices - prices * 0.50
+# print("Discounted Prices:", discounted_prices)
+# increased_prices = prices + 5
+# print("Increased Prices:", increased_prices) 
+
+# scaled_prices = prices - 5
+# print("Scaled Prices:", scaled_prices)
+
+# doubled_prices = prices * 2
+# print("Doubled Prices:", doubled_prices)
+
+# divided_prices = prices / 2
+# print("Divided Prices:", divided_prices)
+
+# squared_prices = prices ** 2
+# print("Squared Prices:", squared_prices)
+
+# mod_prices = prices / prices[0]
+# print("Mod Prices:", mod_prices)
+
+# print("Mean Price", np.mean(prices))
+# print("std Price", np.std(prices))
+# print("sum Price", np.sum(prices))
+# print("min Price", np.min(prices))
+# print("max Price", np.max(prices))
+# print("argmin Price", np.argmin(prices))
+# print("diff Price", np.diff(prices))
+
+
+
+# def moving_average(arr, window):
+#     return np.convolve(arr, np.ones(window)/window, mode='valid')
+
+# prices = np.array([101,102,103,104,105,106])
+# ma3 = moving_average(prices, 3)
+# print(ma3) 
+
+
+# data = np.array([[1,2,3],[4,5,6]])
+# print(data[1,2])       # 2
+# print(data[:,2])       # first column
+
+
+# Concatinate two arrays
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+concatenated_array = np.concatenate((arr1, arr2), axis=0)  # Concatenate along rows
+print("Concatenated Array:\n", concatenated_array)
+
+# Stack horizontally and vertically
+stacked_array_h = np.hstack((arr1, arr2))  # Stack horizontally
+print("Stacked Horizontally:\n", stacked_array_h)
+stacked_array_v = np.vstack((arr1, arr2))  # Stack vertically
+print("Stacked Vertically:\n", stacked_array_v)
