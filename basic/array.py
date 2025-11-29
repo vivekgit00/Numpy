@@ -1,5 +1,20 @@
 import numpy as np
 import time 
+
+
+
+########################################
+########################################
+# Attribute	Meaning
+# arr.ndim	number of dimensions
+# arr.shape	shape/size (rows, columns)
+# arr.size	total elements
+# arr.dtype	data type
+# arr.itemsize	bytes per element
+########################################
+########################################
+
+
 py_list = [1, 2, 3, 4, 5]
 # data = py_list * 1
 # data = py_list * 2

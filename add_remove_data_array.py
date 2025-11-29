@@ -1,0 +1,106 @@
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([6, 7, 8, 9, 10])
+# combine = arr1 + arr2
+# combined_arr = np.concatenate((arr1, arr2), axis=None)
+
+# print("Array 1:", combine)
+# print("Array 2:", combined_arr)
+
+# append = np.append(arr1, [11, 12, 13])
+# print("Appended Array:", append)
+
+#remove element by Index
+# deleted_arr = np.delete(arr1, [0, 1])
+# print("deleted Array:", deleted_arr)
+
+#remove by value
+# del_value = 3
+# arr_after_value_removal = arr1[arr1 != del_value]
+# print("Array after removing value {}: {}".format(del_value, arr_after_value_removal))
+
+
+# Add Row to 2D array
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+# new_row = np.array([[7, 8, 9]])
+# arr_with_row = np.vstack([arr_2d, new_row])
+# print("2D Array with new row:\n", arr_with_row)
+# arr_new_column = np.array([[10], [11], [12]])
+# arr_with_new_column = np.hstack([arr_with_row, arr_new_column])
+# print("2D Array with new column:\n", arr_with_new_column)
+
+# Remove elements
+# remove_row = np.delete(arr_2d, 0, axis=0)  # Remove first row
+# print("2D Array after removing first row:\n", remove_row)
+# remove_column = np.delete(arr_2d, 1, axis=1)  # Remove second column
+# print("2D Array after removing second column:\n", remove_column)
+
+
+# Boolean Mask Removal (FASTER)
+# remove_mask = arr1 != 5
+# print("Original Array:", arr1[remove_mask])
+# romove_2darr = arr_2d[:,1] != 5
+# print("2D Array after applying mask:\n", arr_2d[romove_2darr])
+# remove_2darr_column = arr_2d[:, arr_2d[0, :] != 2]
+# print("2D Array after removing column with value 2:\n", remove_2darr_column)
+
+
+#Insert element using index
+# inserted_arr = np.insert(arr1, 2, [99, 100])  # Insert 99 and 100 at index 2
+# print("Array after insertion:", inserted_arr)
+
+# Insert row in 2D array
+# new_row_2d = np.array([[10, 11, 12]])
+# arr_with_inserted_row = np.insert(arr_2d, 1, new_row_2d, axis=0)  # Insert at index 1
+# print("2D Array after inserting new row:\n", arr_with_inserted_row)
+# Insert column in 2D array
+# new_column_2d = np.array([[20], [21]])
+# arr_with_inserted_column = np.insert(arr_2d, 2, new_column_2d, axis=1)  # Insert at index 2
+# print("2D Array after inserting new column:\n", arr_with_inserted_column)
+
+
+#Fast 
+# Simulating streaming data addition
+# stream = np.random.rand(1000000, 3)  # Simulated stream of data
+# arr = np.zeros((1000000, 3))
+stream = np.random.rand(1000000, 3)
+arr = np.zeros((1000000, 3))
+pointer = 0
+
+# for row in stream:
+#     arr[pointer] = row
+#     pointer += 1
+# print("Final Array after streaming data addition:\n", arr)
+
+#ML TASK
+# data = []
+#
+# for packet in stream:
+#     data.append(packet)
+#
+# final = np.array(data)
+# print("Final Array after streaming data addition:\n", final)
+
+#Removing wit Mask
+# filtered = stream[stream[:, 0] > 0.7]
+# print("Filtered Array:\n", filtered)
+#
+# size = np.size(filtered)
+# print(size)
+
+
+# Split
+# arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+# parts = np.split(arr, 3)
+# print(parts[0])
+
+#2d Split
+# arr_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+# left, right = np.hsplit(arr_2d, 2)
+# print(left)
+# top, bottom = np.vsplit(arr_2d, 2)
+# print(top)
+
+
+

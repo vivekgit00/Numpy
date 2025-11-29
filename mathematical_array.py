@@ -1,0 +1,7 @@
+# np.sum(arr)
+# np.mean(arr)
+# np.max(arr)
+# np.min(arr)
+# np.std(arr)
+# np.sqrt(arr)
+# np.sin(arr)
