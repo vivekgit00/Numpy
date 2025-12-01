@@ -1,0 +1,71 @@
+# import asyncio
+#
+# async def main():
+#     print("Hello")
+#     for i in range(5):
+#         await asyncio.sleep(1)
+#         print("World")
+#
+# asyncio.run(main())
+# # loop = asyncio.new_event_loop()
+# # asyncio.set_event_loop(loop)
+# # loop.run_until_complete(main())
+# # loop.close()
+
+
+# import asyncio
+#
+# async def task(name, sec):
+#     print(f"{name} start")
+#     await asyncio.sleep(sec)
+#     print(f"{name} end")
+#
+# async def main():
+#     await asyncio.gather(
+#         task("A", 3),
+#         task("B", 2),
+#         task("C", 1)
+#     )
+#
+# asyncio.run(main())
+
+
+import asyncio
+
+# async def chai_banao():
+#     print("Chai bana rahe 5 sec...")
+#     await asyncio.sleep(5)
+#     print("🌟 Chai ready!")
+#
+# async def room_saaf_karna():
+#     print("Room saaf kar rahe...")
+#     await asyncio.sleep(3)
+#     print("🧹 Room clean!")
+#
+# async def main():
+#     # await asyncio.gather(
+#     #     chai_banao(),
+#     #     room_saaf_karna()
+#     # )
+#     task = asyncio.create_task(chai_banao())
+#     await room_saaf_karna()
+#     await task
+#
+# asyncio.run(main())
+
+import asyncio
+import aiohttp
+
+async def fetch(session, url):
+    async with session.get(url) as res:
+        return await res.text()
+
+async def main():
+    urls = ["https://example.com"] * 10
+
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch(session, url) for url in urls]
+        results = await asyncio.gather(*tasks)
+
+asyncio.run(main())
+
